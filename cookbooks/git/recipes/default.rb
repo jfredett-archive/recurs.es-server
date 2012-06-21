@@ -6,8 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-
-
 package 'git' do
-  action[:install]
+  action [:install, :upgrade]
 end
