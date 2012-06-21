@@ -7,3 +7,4 @@ version          "0.0.1"
 
 depends 'recurses-site', '~> 0.0.1'
 depends 'recurses-users', '~> 0.0.1'
+
