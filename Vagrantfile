@@ -13,7 +13,7 @@ Vagrant::Config.run do |config|
   config.vm.provision :chef_solo do |chef|
     chef.node_name = 'recurs.es'
 
-    chef.log_level = 'debug'
+    chef.log_level = 'info'
 
     chef.cookbooks_path = 'cookbooks'
     chef.roles_path = 'roles'
