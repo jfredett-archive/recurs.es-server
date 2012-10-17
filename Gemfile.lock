@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    archive-tar-minitar (0.5.2)
     bunny (0.7.9)
     chef (10.12.0)
       bunny (>= 0.6.0)
@@ -21,15 +20,10 @@ GEM
       treetop (~> 1.4.9)
       uuidtools
       yajl-ruby (~> 1.1)
-    childprocess (0.3.0)
-      ffi (~> 1.0.6)
     erubis (2.7.0)
-    ffi (1.0.11)
     highline (1.6.13)
-    i18n (0.6.0)
     ipaddress (0.8.0)
     json (1.5.4)
-    log4r (1.1.10)
     mime-types (1.18)
     mixlib-authentication (1.1.4)
       mixlib-log
@@ -38,8 +32,6 @@ GEM
     mixlib-log (1.4.1)
     mixlib-shellout (1.0.0)
     moneta (0.6.0)
-    net-scp (1.0.4)
-      net-ssh (>= 1.99.1)
     net-ssh (2.2.2)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
@@ -62,15 +54,6 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     uuidtools (2.1.2)
-    vagrant (0.9.4)
-      archive-tar-minitar (= 0.5.2)
-      childprocess (~> 0.3.0)
-      erubis (~> 2.7.0)
-      i18n (~> 0.6.0)
-      json (~> 1.5.1)
-      log4r (~> 1.1.9)
-      net-scp (~> 1.0.4)
-      net-ssh (~> 2.2.2)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -79,4 +62,3 @@ PLATFORMS
 DEPENDENCIES
   chef
   rake
-  vagrant
