@@ -3,6 +3,7 @@ description 'The recurs.es web server'
 
 run_list(
   'recipe[git]',
-  'recipe[monit]'
+  'recipe[monit]',
+  'recipe[nginx]'
 )
 
