@@ -1,0 +1,18 @@
+set daemon 120
+  #wait five minutes after start for first check 
+  #to give everything else a chance to boot
+  with start delay 300
+
+set logfile syslog facility log_daemon
+
+#set httpd port 31415 address localhost
+#  allow localhost
+
+#for the moment, should probably use something else.
+set mailserver localhost
+
+set mail-format { form: monit@recurs.es }
+
+set alert jfredett+monit@gmail.com
+
+include /etc/monit.d/*
