@@ -17,7 +17,6 @@ end
 
 service 'monit' do
   service_name 'monitd'
-  enabled true
   action [:enable, :restart]
   supports [:start, :restart, :stop]
 end
