@@ -17,11 +17,11 @@ template '/etc/monitrc' do
 end
 
 directory '/etc/monit.d' do
-  action [:create]
+  action :create
 end
 
 service 'monit' do
   service_name 'monitd'
-  action [:enable, :restart]
+  action :enable
   supports [:start, :restart, :stop]
 end
