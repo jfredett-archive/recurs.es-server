@@ -1,9 +1,8 @@
 actions :create, :delete
 default_action :create
 
-attribute :service
-attribute :supports
-attribute :service_actions
+attribute :service_supports
+attribute :service_action
 
 attribute :variables
 
