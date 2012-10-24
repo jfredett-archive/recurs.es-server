@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe 'monit'
+
 package 'nginx' do
   action [:install]
 end
@@ -28,3 +30,8 @@ template '/etc/nginx/nginx.conf' do
   mode 0664
 end
 
+monit_service 'nginx' do
+  service_supports [:enable, :start, :stop]
+  service_action :start
+  variables({ :start_command => '/etc/rc.d/nginx start', :stop_command => '/etc/rc.d/nginx stop', :script => '' })
+end
