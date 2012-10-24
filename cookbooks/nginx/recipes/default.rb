@@ -14,11 +14,19 @@ package 'nginx' do
 end
 
 group 'www' do
-  action [:create]
+  action :create
+end
+
+directory '/var/pids' do
+  action :create
+end
+
+directory '/var/logs' do
+  action :create
 end
 
 user 'www-server' do
-  action [:create]
+  action :create
   shell '/bin/false'
   gid 'www'
 end
@@ -31,7 +39,11 @@ template '/etc/nginx/nginx.conf' do
 end
 
 monit_service 'nginx' do
-  service_supports [:enable, :start, :stop]
   service_action :start
-  variables({ :start_command => '/etc/rc.d/nginx start', :stop_command => '/etc/rc.d/nginx stop', :script => '' })
+  service_supports [:enable, :start, :stop]
+  variables({
+    :start_command => '/etc/rc.d/nginx start',
+    :stop_command => '/etc/rc.d/nginx stop',
+    :script => ''
+  })
 end
