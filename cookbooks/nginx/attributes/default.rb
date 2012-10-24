@@ -5,8 +5,8 @@ default['nginx'] = {
   'worker_connections' => 1024,
 
   'executing' => {
-    'user'    => 'arch' ,
-    'group'   => 'wheel',
+    'user'    => 'www-server' ,
+    'group'   => 'www',
   },
 
   'location' => {
