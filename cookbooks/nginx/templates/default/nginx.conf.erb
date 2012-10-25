@@ -3,9 +3,13 @@ user 'www-server' 'www';
 worker_processes 5;
 
 pid /var/pids/nginx.pid;
-error_log /var/logs/nginx.log;
+error_log /var/logs/nginx/error.log;
 
 events {
   worker_connections 4096; # increase if you have lots of clients
 }
 
+http {
+  access_log /var/logs/nginx/access.log;
+
+}
