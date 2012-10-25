@@ -12,4 +12,5 @@ events {
 http {
   access_log /var/logs/nginx/access.log;
 
+  include /etc/nginx/sites/*.site;
 }

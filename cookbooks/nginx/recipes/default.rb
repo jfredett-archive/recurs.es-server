@@ -32,6 +32,15 @@ directory '/var/logs/nginx/' do
   recursive true
 end
 
+directory '/etc/nginx/sites/' do
+  action :create
+
+  owner 'www-server'
+  group 'www'
+
+  recursive true
+end
+
 
 template '/etc/nginx/nginx.conf' do
   source 'nginx.conf.erb'
