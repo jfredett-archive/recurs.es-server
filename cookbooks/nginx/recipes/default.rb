@@ -7,6 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe 'base_directories'
 include_recipe 'monit'
 
 package 'nginx' do
@@ -23,13 +24,8 @@ user 'www-server' do
   gid 'www'
 end
 
-directory '/var/pids/' do
-  action :create
-end
-
 directory '/var/logs/nginx/' do
   action :create
-  recursive true
 end
 
 directory '/etc/nginx/sites/' do
@@ -37,10 +33,7 @@ directory '/etc/nginx/sites/' do
 
   owner 'www-server'
   group 'www'
-
-  recursive true
 end
-
 
 template '/etc/nginx/nginx.conf' do
   source 'nginx.conf.erb'

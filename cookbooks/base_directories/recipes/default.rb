@@ -6,3 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+directory('/var/pids/') { action :create }
+directory('/var/logs/') { action :create }
