@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe 'base_directories'
+
 package 'monit' do
   action [:install, :upgrade]
 end

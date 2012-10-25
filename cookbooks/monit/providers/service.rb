@@ -5,13 +5,6 @@ action :create do
     notifies :restart, 'service[monit]'
   end
 
-  directory '/var/pids/' do
-    owner 'root'
-    group 'root'
-    mode '755'
-    action :create
-  end
-
   template "/etc/monit.d/#{new_resource.name}.monit" do
     source "monit_service.erb"
     cookbook 'monit'
