@@ -45,7 +45,12 @@ monit_service 'nginx' do
   service_supports [:enable, :start, :stop]
   variables({
     :start_command => '/etc/rc.d/nginx start',
-    :stop_command => '/etc/rc.d/nginx stop',
-    :script => ''
+    :stop_command  => '/etc/rc.d/nginx stop',
+    :script        => %Q{
+      group www
+      if children > 250 then restart
+      if loadavg(5min) greater than 10 for 10 cycles then restart
+      if 3 restarts within 5 cycles then timeout
+    }
   })
 end
