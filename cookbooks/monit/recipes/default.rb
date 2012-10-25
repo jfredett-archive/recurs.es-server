@@ -13,7 +13,7 @@ end
 
 template '/etc/monitrc' do
   source 'monitrc.erb'
-  action [:create_if_missing]
+  action :create
 end
 
 directory '/etc/monit.d' do
@@ -22,6 +22,6 @@ end
 
 service 'monit' do
   service_name 'monitd'
-  action :enable
+  action :start
   supports [:start, :restart, :stop]
 end
