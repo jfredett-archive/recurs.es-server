@@ -17,19 +17,21 @@ group 'www' do
   action :create
 end
 
-directory '/var/pids' do
-  action :create
-end
-
-directory '/var/logs' do
-  action :create
-end
-
 user 'www-server' do
   action :create
   shell '/bin/false'
   gid 'www'
 end
+
+directory '/var/pids/' do
+  action :create
+end
+
+directory '/var/logs/nginx/' do
+  action :create
+  recursive true
+end
+
 
 template '/etc/nginx/nginx.conf' do
   source 'nginx.conf.erb'
