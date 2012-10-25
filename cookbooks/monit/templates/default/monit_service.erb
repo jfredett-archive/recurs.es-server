@@ -1,4 +1,4 @@
 check process <%= @name %> with pidfile /var/pids/<%= @name %>.pid
-  start program = <%= @start_command %>
-  stop  program = <%= @start_command %>
+  start program = <%= @start_command.inspect %>
+  stop program = <%= @start_command.inspect %>
   <%= @script %>
