@@ -1,5 +1,5 @@
 set daemon 120
-  #wait five minutes after start for first check 
+  #wait five minutes after start for first check
   #to give everything else a chance to boot
   with start delay 300
 
@@ -11,7 +11,7 @@ set logfile syslog facility log_daemon
 #for the moment, should probably use something else.
 set mailserver localhost
 
-set mail-format { form: monit@recurs.es }
+set mail-format { from: monit@recurs.es }
 
 set alert jfredett+monit@gmail.com
 
