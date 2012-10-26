@@ -24,7 +24,7 @@ user 'www-server' do
   gid 'www'
 end
 
-base_directories_log 'nginx/'
+log_dir 'nginx/'
 
 directory '/etc/nginx/sites/' do
   action :create
