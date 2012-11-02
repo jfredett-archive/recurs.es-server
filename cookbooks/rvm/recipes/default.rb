@@ -34,4 +34,9 @@ file '/etc/gemrc' do
   action [:delete, :touch]
   backup false
 end
+
+cookbook_file '/etc/rvmrc' do
+  action :create
+  backup false
+  source 'rvmrc'
 end
