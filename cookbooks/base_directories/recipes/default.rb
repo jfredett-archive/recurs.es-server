@@ -9,4 +9,4 @@
 
 directory('/var/pids/') { action :create }
 directory('/var/logs/') { action :create }
-directory('/srv/www/') { action :create }
+directory('/srv/www/')  { action :create }
