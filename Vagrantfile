@@ -7,7 +7,7 @@ Vagrant::Config.run do |config|
   #date = "2011.08.19"
   #config.vm.box_url = "#{root}/#{date}/archlinux_#{date}.box/download"
 
-  config.vm.box = "archlinux"
+  config.vm.box = "arch_linux"
 
   config.vm.provision :chef_solo do |chef|
     chef.node_name = 'recurs.es'
