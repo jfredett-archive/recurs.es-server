@@ -32,4 +32,6 @@ end
 # everything should go through rvm.
 file '/etc/gemrc' do
   action [:delete, :touch]
+  backup false
+end
 end
