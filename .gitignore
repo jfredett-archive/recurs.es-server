@@ -5,3 +5,4 @@ archlinux-2012.10.06-dual.iso
 .chef/
 *.box
 *.iso
+boxen/*
