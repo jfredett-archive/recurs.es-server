@@ -10,6 +10,11 @@
 include_recipe "base_directories"
 include_recipe "rvm"
 
+
+rvm_ruby 'rbx' do
+  options ['--1.9']
+end
+
 deploy site_dir('recurses-static') do
   action :deploy
 
