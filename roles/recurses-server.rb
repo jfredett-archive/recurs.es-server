@@ -7,6 +7,7 @@ run_list(
   'recipe[git]',
   'recipe[rvm]',
   'recipe[monit]',
-  'recipe[nginx]'
+  'recipe[nginx]',
+  'recipe[recurses-static]'
 )
 
