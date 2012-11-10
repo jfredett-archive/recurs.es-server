@@ -10,6 +10,8 @@
 include_recipe "base_directories"
 include_recipe "rvm"
 
+#nginx_site 'recurs.es' do
+#end
 
 rvm_ruby 'rbx' do
   options ['--1.9']
