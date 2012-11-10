@@ -15,6 +15,10 @@ rvm_ruby 'rbx' do
   options ['--1.9']
 end
 
+rvm_gemset 'recurses-static' do
+  ruby 'rbx'
+end
+
 deploy site_dir('recurses-static') do
   action :deploy
 
