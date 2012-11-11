@@ -9,6 +9,12 @@ Vagrant::Config.run do |config|
 
   config.vm.box = "arch_linux"
 
+  config.vm.forward_port 80, 10080
+  config.vm.forward_port 3000, 13000
+  config.vm.forward_port 4000, 14000
+  config.vm.forward_port 5000, 15000
+
+
   config.vm.provision :chef_solo do |chef|
     chef.node_name = 'recurs.es'
 
