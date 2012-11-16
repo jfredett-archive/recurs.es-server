@@ -2,13 +2,7 @@ name        'recurses-server'
 description 'The recurs.es web server'
 
 run_list(
-  'recipe[arch_init]',
-  'recipe[base_directories]',
-  'recipe[git]',
-  'recipe[rvm]',
-  'recipe[haskell]',
-  'recipe[monit]',
-  'recipe[nginx]',
-  'recipe[recurses-static]'
+  'role[recurses-static]',
+  'recipe[haskell]'
 )
 
