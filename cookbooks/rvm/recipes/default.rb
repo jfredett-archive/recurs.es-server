@@ -81,6 +81,7 @@ rvm_ruby '1.9.3' do
   #need to reinstall this, since subsequent runs won't be able to
   #find it otherwise.
   global_gems ['chef']
+  not_if 'rvm 1.9.3 do ruby --version && chef-client --version'
 end
 
 
