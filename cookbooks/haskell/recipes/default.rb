@@ -9,3 +9,5 @@
 
 package 'ghc'
 package 'cabal-install'
+
+cabal_update as: 'root'
