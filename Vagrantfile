@@ -2,17 +2,16 @@
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
-  # Every Vagrant virtual environment requires a box to build off of.
-  #root = "http://sourceforge.net/projects/vagrantarchlinx/files/files"
-  #date = "2011.08.19"
-  #config.vm.box_url = "#{root}/#{date}/archlinux_#{date}.box/download"
+  config.package.name = "boxen/arch-linux_#{Time.now.strftime("%Y-%m-%d")}.box"
 
   config.vm.box = "arch_linux"
 
+  # forward http
   config.vm.forward_port 80, 10080
-  config.vm.forward_port 3000, 13000
-  config.vm.forward_port 4000, 14000
-  config.vm.forward_port 5000, 15000
+
+  # set up memory and CPU assignments
+  config.vm.customize ["modifyvm", :id, "--memory", 2048]
+  config.vm.customize ["modifyvm", :id, "--cpus", 4]
 
 
   config.vm.provision :chef_solo do |chef|
