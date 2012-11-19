@@ -17,3 +17,10 @@ bash 'force update package databases' do
   code 'pacman -Syy --noconfirm --noprogressbar'
 end
 
+file '/etc/locale.conf' do
+  owner 'root'
+  backup false
+
+  mode '644'
+  content 'LC_ALL=en_US.UTF-8'
+end
