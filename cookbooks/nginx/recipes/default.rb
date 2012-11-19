@@ -14,10 +14,7 @@ package 'nginx' do
   action [:install]
 end
 
-group 'www' do
-  action :create
-end
-
+group 'www'
 user 'www-server' do
   action :create
   shell '/bin/false'
