@@ -10,6 +10,7 @@
 group 'pids'
 group 'sites'
 group 'logs'
+group 'apps'
 
 directory('/var/pids/') do
   action :create
@@ -28,5 +29,11 @@ end
 directory('/srv/www/') do
   action :create
   group 'sites'
+  mode '775'
+end
+
+directory('/srv/app') do
+  action :create
+  group 'apps'
   mode '775'
 end
