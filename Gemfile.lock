@@ -36,7 +36,7 @@ GEM
     gist (3.1.0)
     highline (1.6.13)
     ipaddress (0.8.0)
-    json (1.5.4)
+    json (1.6.1)
     method_source (0.7.1)
     mime-types (1.18)
     mixlib-authentication (1.1.4)
